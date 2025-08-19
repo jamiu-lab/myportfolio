@@ -1,0 +1,141 @@
+.announcement-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    letter-spacing: 10px;
+    background-color: black;
+    color: #ADD8E6;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+  }
+
+.logo {
+    display: flex;
+    flex: 1;
+    width: 40px;
+    height: 40px;
+    top: 35px;
+    margin-left: 30px;
+    background-color: transparent;
+  }
+
+  .hyperlink {
+    color: #ADD8E6;
+    text-decoration: none;
+    font-family: Roboto, Arial;
+    background-color: transparent;
+  }
+
+.hyperlink::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #ADD8E6;
+    transition: 0.5s;
+    display: block;
+    margin: auto;
+  }
+
+.hyperlink:hover::after {
+    width: 100%;
+  }
+
+  .banner-image {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+.get-started {
+    background-color: transparent;
+    display: inline-block;
+    padding: 10px 30px 10px 30px;
+    position: relative;
+    bottom: 200px;
+    left: 50%;
+    text-decoration: none;
+    color: #ADD8E6;
+    font-family: Roboto, Arial;
+    font-size: medium;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: lightskyblue;
+    border-width: 2px;
+    box-shadow: 0px 4px 15px rgba(173, 216, 230, 1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+.get-started:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 6px 25px rgba(173, 216, 230, 1);
+  }
+
+.nav-menu {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 10px;
+    background-color: transparent;
+  }
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    color: #ADD8E6;
+    cursor: pointer;
+    margin-top: -10px ;
+    padding-left: 10px;
+    background-color: transparent;
+  }
+
+  /*Responsive for website for get-started-btn*/
+
+  @media (max-width:750px) {
+    .get-started {
+      padding: 8px 20px 8px 20px;
+      bottom: 110px;
+    }
+  }
+  /*Responsive website for toggle menu*/
+
+  @media (max-width:750px) {
+    .menu-toggle {
+      display: flex;
+      flex: 1;
+    }
+
+    .nav-menu.active {
+      display: flex;
+    }
+
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      height: 200px;
+      position: absolute;
+      background-color: black;
+      width: 100%;
+      top: 90px;
+      padding: 10px;
+      left: 0;
+    }
+
+    .logo {
+      display: flex;
+      flex: 2;
+      order: 1;
+    }
+    
+  }
