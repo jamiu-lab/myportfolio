@@ -562,6 +562,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 7rem;
 }
 
 .social {
@@ -573,9 +574,10 @@ footer {
   align-items: center;
 }
 
-.social h3 {
+.social-p {
+  position: absolute;
+  bottom: 2.5rem;
   background-color: transparent;
-  font-size: 1rem;
 }
 
 .social img {
@@ -597,9 +599,11 @@ footer {
   margin-right: 1rem;
 }
 
-.secure-payment h3 {
+.secure-payment-p {
+  position: absolute;
   background-color: transparent;
-  font-size: 1rem;
+  right: 3.5rem;
+  bottom: 2.5rem;
 }
 
 .secure-payment a {
@@ -635,10 +639,15 @@ footer {
 @media (max-width: 768px) {
   .contact {
     flex-direction: column;
-    gap: 2rem;
     margin: 0;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-container {
+    margin-bottom: 3rem;
   }
 }
 
@@ -649,7 +658,8 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 0;
-    gap: 2rem;
+    gap: 3rem;
+    margin-top: 5rem;
   }
 }
 
@@ -661,9 +671,38 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .social {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
   .secure-payment img {
     display: flex;
     align-items: center;
     margin-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .copywrite {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-p {
+    position: absolute;
+    bottom: 5rem;
+    right: 11rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .secure-payment-p {
+    position: absolute;
+    top: 19rem;
+    right: 9rem;
   }
 }
