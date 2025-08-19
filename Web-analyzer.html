@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="title"
+      content="Vision Digital | Website &amp; Shopify Development"
+    />
+    <meta
+      name="description"
+      content="Vision Digital specializes in website development, Shopify solutions, and ecommerce strategies tailored to boost online business productivity."
+    />
+    <meta
+      name="keywords"
+      content="Vision Digital, website development, Shopify development, ecommerce, online store, Shopify expert, Shopify website, web design, digital marketing, Nigeria"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta name="author" content="Vision Digital" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="heading.css" />
+    <link rel="stylesheet" href="announcement-bar.css" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="footer.css" />
+
+    <title>Website Analyzer</title>
+    <style>
+      body {
+        font-family: Roboto, Arial;
+        padding: 80px;
+        box-sizing: border-box;
+        color: #1a1a1a;
+      }
+
+      p {
+        background-color: transparent;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: 20px;
+      }
+
+      input,
+      button {
+        padding: 8px;
+        margin: 5px;
+      }
+      #results {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="announcement-bar">
+      <marquee
+        style="background-color: transparent"
+        behavior="scroll"
+        direction="left"
+        scrollamount="10"
+        onmouseover="this.stop();"
+        onmouseout="this.start();"
+      >
+        <p>
+          WE'RE EXCITED TO SHARE OUR PORTFOLIO WITH YOU SHOWCASING OUR EXPERTISE
+          IN DIGITAL EXCELLENCE
+        </p>
+      </marquee>
+    </section>
+
+    <div>
+      <a
+        style="
+          display: flex;
+          flex: 1;
+          width: 80px;
+          height: 80px;
+          top: 35px;
+          margin-left: 30px;
+          background-color: transparent;
+          border-radius: 10px;
+          border-style: solid;
+          border-color: black;
+        "
+        class="logo"
+        href="Vision-Digital.html"
+        ><img src="logo/IMG-20250502-WA0009.jpg"
+      /></a>
+    </div>
+
+    <h1>Website Analyzer</h1>
+    <form id="analyzerForm">
+      <input type="url" id="siteUrl" placeholder="Enter website URL" required />
+      <button type="submit">Analyze</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+      const API_KEY = "YOUR_API_KEY"; // Replace with your Google API key
+      const API_URL =
+        "https://www.googleapis.com/pagespeedonline/v5/runPagespeed";
+
+      document
+        .getElementById("analyzerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          let site = document.getElementById("siteUrl").value;
+          analyzeSite(site);
+        });
+
+      function analyzeSite(url) {
+        document.getElementById("results").innerHTML = "Analyzing...";
+        fetch(`${API_URL}?url=${encodeURIComponent(url)}&key=${API_KEY}`)
+          .then((response) => response.json())
+          .then((data) => {
+            const score =
+              data.lighthouseResult.categories.performance.score * 100;
+            const fcp =
+              data.lighthouseResult.audits["first-contentful-paint"]
+                .displayValue;
+            const lcp =
+              data.lighthouseResult.audits["largest-contentful-paint"]
+                .displayValue;
+
+            document.getElementById("results").innerHTML = `
+            <h3>Results for ${url}</h3>
+            <p><strong>Performance Score:</strong> ${score}</p>
+            <p><strong>First Contentful Paint:</strong> ${fcp}</p>
+            <p><strong>Largest Contentful Paint:</strong> ${lcp}</p>
+          `;
+          })
+          .catch((err) => {
+            document.getElementById("results").innerHTML =
+              "Error: " + err.message;
+          });
+      }
+    </script>
+  </body>
+</html>
