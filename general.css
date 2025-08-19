@@ -520,12 +520,11 @@ button:hover {
   }
 }
 
-/* Footer Styles */
+/* FOOTER SECTION */
 footer {
   background-color: black;
   height: 14rem;
   color: #fff;
-  padding: 1em 2em 0 2em;
   font-family: Arial, sans-serif;
   position: relative;
   border-style: solid;
@@ -538,9 +537,12 @@ footer {
 
 .contact {
   background-color: transparent;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  height: 5rem;
+  margin-right: 0;
 }
+
 .contact h3,
 .contact a {
   background-color: transparent;
@@ -549,21 +551,50 @@ footer {
   color: white;
 }
 
+.newsletter-container {
+  margin-bottom: 0;
+  background-color: transparent;
+  display: flex;
+}
+
 .footer-2 {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  flex: 1;
+  background-color: transparent;
+  height: fit-content;
+  width: 10rem;
+  align-items: center;
+}
+
+.social h3 {
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.social img {
+  width: 30px;
+  background-color: transparent;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.social a {
+  background-color: transparent;
+  color: white;
 }
 
 .secure-payment {
   display: flex;
-  position: absolute;
-  margin-top: 7rem;
-  margin-bottom: 2em;
   background-color: transparent;
-  right: 8rem;
-  justify-content: space-between;
   height: fit-content;
-  align-items: center;
-  width: 10rem;
+  margin-right: 1rem;
 }
 
 .secure-payment h3 {
@@ -582,76 +613,57 @@ footer {
   cursor: pointer;
 }
 
-.follow-us {
-  display: flex;
-  position: absolute;
-  margin-top: 7.5rem;
-  background-color: transparent;
-  left: 2rem;
-  justify-content: space-between;
-  height: fit-content;
-  align-items: center;
-  width: 10rem;
-}
-
-.follow-us h3 {
-  background-color: transparent;
-  font-size: 1rem;
-  margin-right: 1rem;
-}
-
-.follow-us img {
-  width: 30px;
-  background-color: transparent;
-  margin-right: 1rem;
-  cursor: pointer;
-}
-
-.follow-us a {
-  background-color: transparent;
-  color: white;
-}
-
-.newsletter-container {
-  position: absolute;
-  right: 0;
-  top: 30px;
-  bottom: 0;
-  background-color: transparent;
-  margin-right: 2em;
-  height: fit-content;
-}
-
-.newsletter {
-  background-color: transparent;
-  height: fit-content;
-}
-
-.newsletter h3 {
-  background-color: transparent;
-}
-
 .copywrite,
 .copywrite p {
   background-color: transparent;
   display: flex;
-  justify-content: center;
+  flex: 2;
   color: #fff;
   text-decoration: none;
-  text-align: center;
   font-family: "Times New Roman", Times, serif;
-  margin-top: 4rem;
   font-size: 1rem;
 }
 
+/* RESPONSIVE WEBSITE FOR FOOTER SECTION */
+
 @media (max-width: 768px) {
   .footer {
-    height: 30rem;
+    height: auto;
   }
 }
 
 @media (max-width: 768px) {
   .contact {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social img {
+    margin-right: 3rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .secure-payment img {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
   }
 }
