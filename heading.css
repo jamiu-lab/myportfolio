@@ -1,29 +1,13 @@
-<<<<<<< HEAD
 .heading {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    align-items: center;
-    padding-top: 50px;
-    background-color: black;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 2;
-  }
-=======
-.heading {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    align-items: center;
-    padding-top: 50px;
-    background-color: black;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 2;
-  }
->>>>>>> 2c2d12e0c81dc6e34cf25047d8384101b34956e3
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  padding-top: 50px;
+  background-color: black;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
