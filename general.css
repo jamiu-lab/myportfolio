@@ -554,7 +554,11 @@ footer {
   display: grid;
 }
 
-.contact,
+.contact {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .contact h3,
 .contact a {
   background-color: transparent;
