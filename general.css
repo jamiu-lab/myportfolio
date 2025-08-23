@@ -4,11 +4,11 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 10px;
+  background-color: #1a1a1a;
 }
 
 .skills-container {
-  background-color: #1a1a1a;
+  background-color: black;
   color: white;
   flex: 1 1 calc(33.333% - 10px);
   box-sizing: border-box;
@@ -48,8 +48,9 @@
 /*RESPONSIVE WEBSITE FOR SMALLER SCREEN. SERVICE CONTAINER*/
 @media (max-width: 768px) {
   .skills-container {
-    flex: 1 1 100%;
+    flex-direction: column;
     margin-top: 35px;
+    max-width: max-content;
   }
 }
 
@@ -72,6 +73,8 @@
   align-items: center;
   flex-wrap: wrap;
   column-gap: 10px;
+  background-color: #1a1a1a;
+  padding-bottom: 1rem;
 }
 
 .skills-container-2 {
@@ -90,7 +93,7 @@
 
 .skills-container-2:hover {
   transform: scale(1.07);
-  box-shadow: 0px 6px 25px rgba(173, 216, 230, 1);
+  box-shadow: 2px 5px 2px 5px black;
 }
 
 .skills-container-2 img {
@@ -115,6 +118,7 @@
   color: black;
   top: 1rem;
   background-color: #add8e6;
+  font-weight: 700;
   text-decoration: none;
   padding: 0.5rem 1rem 0.5rem 1rem;
   font-family: Roboto, Arial;
@@ -135,11 +139,47 @@
 }
 
 /*EXPLORE BEYONG SECTION*/
+:root {
+  --border-radius: 10px;
+}
+
+.explore-beyond {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.explore-beyond::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300;
+  height: 300%;
+  background: conic-gradient(from 0deg, #007bff, #fff, #007bff, #fff);
+  animation: rotate-border 4s linear infinite;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  padding: 5px;
+  border-radius: var(--border-radius);
+}
+
+@keyframes rotate-border {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .explore-beyond h1 {
   background-color: #000000;
-  padding-top: 120px;
-  padding-bottom: 120px;
   font-size: 80px;
   color: #add8e6;
   text-align: center;
@@ -153,19 +193,23 @@
 .image-text-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 35px 35px 0px 35px;
+  padding: 20px 15px 0px 15px;
   column-gap: 30px;
+  row-gap: 2rem;
   margin-bottom: 40px;
+  background-color: #1a1a1a;
+  padding-bottom: 2rem;
 }
 
-.image-container img {
+.image-container img,
+.image-container {
+  background-color: transparent;
   width: 100%;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .image-container :hover {
   transform: scale(1.07);
-  box-shadow: 0px 6px 25px rgba(173, 216, 230, 1);
 }
 
 .text-container {
@@ -207,10 +251,14 @@
   .text-container {
     height: auto;
   }
+
+  .image-container img {
+    max-width: max-content;
+  }
 }
 
 /*SECTION FOR OUR PRICING*/
-.our-pricing-plans p {
+/* .our-pricing-plans p {
   text-align: center;
 }
 
@@ -288,7 +336,7 @@
 
 .pricing-card a:hover {
   transform: scale(1.07);
-}
+} */
 
 /*RESPONSIVE DESIGN FOR PRICING CONTAINER*/
 @media (max-width: 768px) {
@@ -369,12 +417,10 @@
 }
 
 .faq {
-  max-width: 600px;
   margin: auto;
-  background: #fff;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #1a1a1a;
 }
 
 .faq h2 {
@@ -382,11 +428,13 @@
   margin-bottom: 20px;
   color: white;
   font-family: Roboto, Arial;
+  background-color: #1a1a1a;
 }
 
 .faq-item {
   border-bottom: 1px solid #eee;
   padding: 10px 0;
+  background-color: #1a1a1a;
 }
 
 .faq-question {
@@ -396,11 +444,13 @@
   cursor: pointer;
   color: white;
   font-family: Roboto, Arial;
+  background-color: #1a1a1a;
 }
 
 .arrow {
   transition: transform 0.3s ease;
   font-size: 20px;
+  background-color: #1a1a1a;
 }
 
 .arrow.rotate {
@@ -414,6 +464,7 @@
   padding: 0 0;
   color: white;
   font-family: Roboto, Arial;
+  background-color: #1a1a1a;
 }
 
 .faq-answer.show {
@@ -437,6 +488,10 @@
   text-transform: capitalize;
 }
 
+.Contact {
+  background-color: #1a1a1a;
+}
+
 .contact-section h1 {
   margin-top: 50px;
   margin-bottom: 20px;
@@ -444,6 +499,7 @@
 
 .contact-section p {
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .contact-form-container {
@@ -453,12 +509,14 @@
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-top: 50px;
+  background-color: #1a1a1a;
 }
 
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  background-color: #1a1a1a;
 }
 
 .form-group {
@@ -469,8 +527,9 @@ form {
 
 label {
   font-family: Roboto, Arial;
-  margin-bottom: 6px;
+
   color: white;
+  background-color: #1a1a1a;
 }
 
 input,
@@ -480,6 +539,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 8px;
   color: white;
+  background-color: #1a1a1a;
 }
 
 textarea {
@@ -533,41 +593,21 @@ footer {
   border-left: none;
   border-bottom: none;
   border-width: 1px;
+  padding: 2rem 2rem 0 2rem;
 }
 
-.contact {
-  background-color: transparent;
+.footer {
   display: flex;
   flex-direction: row;
-  height: 5rem;
-  margin-right: 0;
-}
-
-.contact h3,
-.contact a {
-  background-color: transparent;
-  font-size: 1rem;
-  text-decoration: none;
-  color: white;
-}
-
-.newsletter-container {
-  margin-bottom: 0;
-  background-color: transparent;
-  display: flex;
-}
-
-.footer-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 7rem;
+  margin-top: 4.6rem;
+  background-color: transparent;
 }
 
 .social {
   display: flex;
   flex: 1;
+  gap: 2rem;
   background-color: transparent;
   height: fit-content;
   width: 10rem;
@@ -576,14 +616,13 @@ footer {
 
 .social-p {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 8rem;
   background-color: transparent;
 }
 
 .social img {
   width: 30px;
   background-color: transparent;
-  margin-right: 1rem;
   cursor: pointer;
 }
 
@@ -596,25 +635,29 @@ footer {
   display: flex;
   background-color: transparent;
   height: fit-content;
-  margin-right: 1rem;
 }
 
 .secure-payment-p {
   position: absolute;
   background-color: transparent;
-  right: 3.5rem;
-  bottom: 2.5rem;
+  bottom: 8rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 10rem;
+}
+
+.icons img {
+  background-color: transparent;
+  width: 30px;
+  cursor: pointer;
 }
 
 .secure-payment a {
   background-color: transparent;
-}
-
-.secure-payment img {
-  background-color: transparent;
-  width: 30px;
-  margin-left: 1rem;
-  cursor: pointer;
 }
 
 .copywrite,
@@ -637,22 +680,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .contact {
-    flex-direction: column;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .newsletter-container {
-    margin-bottom: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-2 {
+  .footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -664,13 +692,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .social img {
-    margin-right: 3rem;
-    align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
   .social {
     display: flex;
     justify-content: center;
@@ -678,31 +699,41 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .secure-payment img {
-    display: flex;
-    align-items: center;
-    margin-left: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .copywrite {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
   .social-p {
     position: absolute;
-    bottom: 5rem;
-    right: 11rem;
+    bottom: 7.7rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .secure-payment {
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
   .secure-payment-p {
     position: absolute;
-    top: 19rem;
-    right: 9rem;
+    top: 15.7rem;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .copywrite {
+    margin-bottom: 1.5rem;
+    align-items: center;
   }
 }
