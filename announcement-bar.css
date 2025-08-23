@@ -105,6 +105,9 @@
   .get-started {
     padding: 8px 20px 8px 20px;
     bottom: 110px;
+    position: absolute;
+    left: 40px;
+    bottom: 200px;
   }
 }
 /*Responsive website for toggle menu*/

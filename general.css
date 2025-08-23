@@ -49,8 +49,18 @@
 @media (max-width: 768px) {
   .skills-container {
     flex-direction: column;
-    margin-top: 35px;
     max-width: max-content;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -617,11 +627,12 @@ footer {
 .social-p {
   position: absolute;
   bottom: 8rem;
+  margin-left: 1rem;
   background-color: transparent;
 }
 
 .social img {
-  width: 30px;
+  width: 50px;
   background-color: transparent;
   cursor: pointer;
 }
@@ -648,11 +659,12 @@ footer {
   flex-direction: row;
   gap: 1rem;
   width: 10rem;
+  margin-right: 2rem;
 }
 
 .icons img {
   background-color: transparent;
-  width: 30px;
+  width: 40px;
   cursor: pointer;
 }
 
@@ -703,6 +715,7 @@ footer {
     position: absolute;
     bottom: 7.7rem;
     justify-content: center;
+    margin-left: 0;
   }
 }
 
@@ -728,6 +741,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin: 0;
   }
 }
 
