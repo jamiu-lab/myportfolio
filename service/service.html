@@ -25,8 +25,7 @@
     />
     <link rel="stylesheet" href="heading.css" />
     <link rel="stylesheet" href="../announcement-bar.css" />
-    <link rel="stylesheet" href="general.css" />
-    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="../general.css" />
 
     <title>Our Services</title>
     <style>
@@ -41,9 +40,9 @@
         padding-top: 80px;
         background-color: #000;
         color: #fff;
+        box-sizing: border-box;
         font-family: Roboto, Arial;
         text-align: center;
-        box-sizing: border-box;
         margin-bottom: 30px;
         padding: 80px 1rem 0 1rem;
       }
@@ -83,10 +82,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        padding: 0 25px 0 25px;
+        padding: 0 25px 3rem 25px;
         column-gap: 20px;
         row-gap: 50px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
 
       .card {
@@ -98,13 +96,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: transform 0.4s ease box-shadow 0.4s ease;
+        transition: transform 0.4s ease;
         max-height: 315px;
       }
 
       .card:hover {
         transform: translateY(-10px) scale(1.05);
-        border: 1px solid #ff7f50;
       }
 
       .icon {
@@ -124,6 +121,7 @@
         padding-right: 10px;
         border-radius: 3px;
         border-style: solid;
+        font-weight: 700;
         border-color: transparent;
         color: black;
         text-decoration: none;
@@ -133,13 +131,23 @@
       }
 
       a.learn-more:hover {
-        background-color: #ff7f50;
+        transform: translateY(-10px) scale(1.05);
       }
 
       /*RESPONDIVE WEBSITE*/
       @media (max-width: 768px) {
         .services-container {
-          grid-template-columns: 1fr 1fr;
+          display: flex;
+          flex-wrap: initial;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .card {
+          display: flex;
+          width: 25rem;
         }
       }
     </style>
@@ -244,5 +252,54 @@
         <a class="learn-more" href="#">LEARN MORE</a>
       </div>
     </section>
+
+    <footer style="height: 12rem">
+      <div class="footer">
+        <div class="social">
+          <div class="social-p">Socials:</div>
+          <a href="https://wa.me/qr/56R6LGP2NPE6J1">
+            <img src="../thumbnails/wa.jpeg"
+          /></a>
+          <a>
+            <img src="../thumbnails/in.jpeg" href="#" />
+          </a>
+          <a href="https://www.instagram.com/4th_hero?igsh=Z3ZxY3Fqa2s0d3Zr"
+            ><img style="width: 35px" src="../thumbnails/insta.jpeg"
+          /></a>
+        </div>
+
+        <div class="copywrite">
+          <p>
+            &copy; 2024 Vision Digital. All rights reserved.|
+            <a
+              style="
+                background-color: transparent;
+                color: white;
+                text-decoration: none;
+              "
+              href="#"
+              >Privacy Policy</a
+            >
+          </p>
+        </div>
+
+        <!-- Payments -->
+        <div class="secure-payment">
+          <div>
+            <div class="secure-payment-p">Secure Payments:</div>
+          </div>
+          <div class="icons">
+            <a> <img src="../thumbnails/fiverr_prev_ui.png" alt="Fiverr" /></a>
+            <a> <img src="../thumbnails/upwork_prev_ui.png" alt="Upwork" /></a>
+            <a href="https://kwork.com/user/VISION_DIGITAL">
+              <img src="../thumbnails/kwork.png" alt="Kwork"
+            /></a>
+            <a>
+              <img src="../thumbnails/payoneer_prev_ui.png" alt="Payoneer"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

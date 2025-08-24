@@ -52,18 +52,19 @@
 
 .banner-image {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   width: 100%;
+  height: 40rem;
 }
 
 .get-started {
-  position: relative;
+  position: absolute;
+  left: 14rem;
+  top: 34rem;
   background-color: transparent;
-  display: inline-block;
+  display: flex;
   padding: 10px 30px 10px 30px;
-  position: relative;
-  bottom: 200px;
-  left: 50%;
   text-decoration: none;
   color: #add8e6;
   font-family: Roboto, Arial;
@@ -104,12 +105,13 @@
 @media (max-width: 750px) {
   .get-started {
     padding: 8px 20px 8px 20px;
-    bottom: 110px;
+    justify-self: center;
     position: absolute;
-    left: 40px;
-    bottom: 200px;
+    top: 28rem;
+    left: 4rem;
   }
 }
+
 /*Responsive website for toggle menu*/
 
 @media (max-width: 750px) {

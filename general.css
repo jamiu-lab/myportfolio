@@ -45,12 +45,11 @@
   margin-top: 25px;
 }
 
-/*RESPONSIVE WEBSITE FOR SMALLER SCREEN. SERVICE CONTAINER*/
+/*RESPONSIVE WEBSITE FOR SMALLER SCREEN SERVICE CONTAINER*/
 @media (max-width: 768px) {
   .skills-container {
     flex-direction: column;
     max-width: max-content;
-    margin: 0;
   }
 }
 
