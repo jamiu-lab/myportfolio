@@ -127,26 +127,24 @@
       </marquee>
     </section>
 
-    <div>
-      <a
-        style="
-          display: flex;
-          flex: 1;
-          width: 80px;
-          height: 80px;
-          top: 35px;
-          margin-left: 30px;
-          background-color: transparent;
-          border-radius: 10px;
-          border-style: solid;
-          border-color: black;
-        "
-        class="logo"
-        alt="Vision Digital"
-        href="index.html"
-        ><img src="logo/IMG-20250502-WA0009.jpg"
-      /></a>
-    </div>
+    <header class="heading">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="logo">
+        <a class="logo" href="index.html"
+          ><img src="logo/IMG-20250502-WA0009.jpg"
+        /></a>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a class="hyperlink" href="index.html"> Home </a>
+        <a class="hyperlink" href="about.html"> About </a>
+        <a class="hyperlink" href="service/service.html"> Service </a>
+        <a class="hyperlink" href="#portfolio"> Portfolio </a>
+        <a class="hyperlink" href="#contact"> Contact </a>
+        <!-- <a class="hyperlink" href="Web-analyzer.html"> Website Analyzer </a> -->
+      </nav>
+    </header>
+
     <!-- Who We Are -->
     <section class="section">
       <h2>Who I Am</h2>
@@ -235,7 +233,7 @@
                 color: white;
                 text-decoration: none;
               "
-              href="#"
+              href="privacy policy.html"
               >Privacy Policy</a
             >
           </p>
