@@ -659,6 +659,7 @@ footer {
   gap: 1rem;
   width: 10rem;
   margin-right: 2rem;
+  background-color: transparent;
 }
 
 .icons img {
@@ -685,11 +686,10 @@ footer {
 /* RESPONSIVE WEBSITE FOR FOOTER SECTION */
 
 @media (max-width: 768px) {
-  .footer {
+  footer {
     height: auto;
   }
 }
-
 @media (max-width: 768px) {
   .footer {
     display: flex;
@@ -712,7 +712,7 @@ footer {
 @media (max-width: 768px) {
   .social-p {
     position: absolute;
-    bottom: 7.7rem;
+    bottom: 15.5rem;
     justify-content: center;
     margin-left: 0;
   }

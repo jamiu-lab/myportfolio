@@ -23,9 +23,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="heading.css" />
+    <link rel="stylesheet" href="../heading.css" />
     <link rel="stylesheet" href="../announcement-bar.css" />
     <link rel="stylesheet" href="../general.css" />
+    <script src="../script.js"></script>
 
     <title>Our Services</title>
     <style>
@@ -37,14 +38,12 @@
 
       body {
         margin: 0;
-        padding-top: 80px;
-        background-color: #000;
+        padding-top: 10rem;
+        background-color: black;
         color: #fff;
         box-sizing: border-box;
         font-family: Roboto, Arial;
         text-align: center;
-        margin-bottom: 30px;
-        padding: 80px 1rem 0 1rem;
       }
 
       h1 {
@@ -62,12 +61,6 @@
         color: gold;
         font-size: 25px;
         text-transform: uppercase;
-      }
-
-      .heading {
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 3em;
       }
 
       p.subtitle {
@@ -171,15 +164,15 @@
     <header class="heading">
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <div class="logo">
-        <a class="logo" href="index.html"
-          ><img src="logo/IMG-20250502-WA0009.jpg"
+        <a class="logo" href="../index.html"
+          ><img src="../logo/IMG-20250502-WA0009.jpg"
         /></a>
       </div>
 
       <nav class="nav-menu" id="navMenu">
-        <a class="hyperlink" href="index.html"> Home </a>
-        <a class="hyperlink" href="about.html"> About </a>
-        <a class="hyperlink" href="service/service.html"> Service </a>
+        <a class="hyperlink" href="../index.html"> Home </a>
+        <a class="hyperlink" href="../about.html"> About </a>
+        <a class="hyperlink" href="../service/service.html"> Service </a>
         <a class="hyperlink" href="#portfolio"> Portfolio </a>
         <a class="hyperlink" href="#contact"> Contact </a>
         <!-- <a class="hyperlink" href="Web-analyzer.html"> Website Analyzer </a> -->
@@ -187,7 +180,7 @@
     </header>
 
     <section>
-      <h2 class="heading">Our Services</h2>
+      <h2 class="headings">Our Services</h2>
       <p class="subtitle">
         Discover the services we offer to help you elevate your business and
         achieve success.
@@ -249,10 +242,10 @@
       </div>
     </section>
 
-    <footer style="height: 12rem">
+    <footer>
       <div class="footer">
         <div class="social">
-          <div class="social-p">Socials:</div>
+          <div style="margin-bottom: 2rem" class="social-p">Socials:</div>
           <a href="https://wa.me/qr/56R6LGP2NPE6J1">
             <img src="../thumbnails/wa.jpeg"
           /></a>
@@ -284,13 +277,18 @@
         <!-- Payments -->
         <div class="secure-payment">
           <div>
-            <div class="secure-payment-p">Secure Payments:</div>
+            <div style="margin-bottom: 2rem" class="secure-payment-p">
+              Secure Payments:
+            </div>
           </div>
           <div class="icons">
             <a> <img src="../thumbnails/fiverr_prev_ui.png" alt="Fiverr" /></a>
             <a> <img src="../thumbnails/upwork_prev_ui.png" alt="Upwork" /></a>
             <a href="https://kwork.com/user/VISION_DIGITAL">
-              <img src="../thumbnails/kwork.png" alt="Kwork"
+              <img
+                style="border-radius: 50px"
+                src="../thumbnails/kwork.png"
+                alt="Kwork"
             /></a>
             <a>
               <img src="../thumbnails/payoneer_prev_ui.png" alt="Payoneer"
