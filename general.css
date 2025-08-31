@@ -121,9 +121,10 @@ a:active {
   max-width: 100%;
   background-color: black;
   flex: 1 1 calc(33.333% - 10px);
+  flex-wrap: wrap;
   box-sizing: border-box;
   margin: 20px;
-  padding: 35px;
+  padding: 1rem;
   border-radius: 1rem;
   border-color: gray;
   border-style: solid;
@@ -156,7 +157,7 @@ a:active {
 .skills-container-2 a {
   display: inline-block;
   margin-top: 1rem;
-  color: black !important;
+  color: black;
   background-color: #add8e6;
   font-weight: 700;
   text-decoration: none;
@@ -184,22 +185,18 @@ a:active {
 }
 
 .explore-beyond {
-  position: relative;
+  background-color: black;
   width: 100%;
-  padding: 5px;
+  height: 9em;
+  padding: 1rem;
   border-radius: var(--border-radius);
   overflow: hidden;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .explore-beyond::before {
   content: "";
   position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 300;
-  height: 300%;
+  width: 100%;
   background: conic-gradient(from 0deg, #007bff, #fff, #007bff, #fff);
   animation: rotate-border 4s linear infinite;
 }
@@ -221,7 +218,6 @@ a:active {
 }
 
 .explore-beyond h1 {
-  background-color: #000000;
   font-size: 80px;
   color: #add8e6;
   text-align: center;
