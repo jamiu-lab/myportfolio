@@ -1,3 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: black;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body {
+  padding-top: 80px;
+  font-family: Roboto, Arial;
+  padding: 10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 /*SERVICE SECTION*/
 .service-container {
   display: flex;
@@ -5,6 +23,8 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: #1a1a1a;
+  border-radius: 1rem;
+  margin-top: 1rem;
 }
 
 .skills-container {
@@ -18,6 +38,9 @@
   border-radius: 10px;
   align-content: center;
   text-align: center;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: gray;
 }
 
 .skills-container h1 {
@@ -68,6 +91,8 @@
   margin-bottom: 20px;
   margin-top: 50px;
   letter-spacing: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .Portfolio p {
@@ -84,6 +109,7 @@
   column-gap: 10px;
   background-color: #1a1a1a;
   padding-bottom: 1rem;
+  border-radius: 1rem;
 }
 
 .skills-container-2 {
@@ -92,8 +118,8 @@
   box-sizing: border-box;
   margin: 20px;
   padding: 35px;
-  border-radius: 10px;
-  border-color: #1a1a1a;
+  border-radius: 1rem;
+  border-color: gray;
   border-style: solid;
   align-content: center;
   text-align: center;
@@ -158,6 +184,8 @@
   padding: 5px;
   border-radius: var(--border-radius);
   overflow: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .explore-beyond::before {
@@ -208,6 +236,7 @@
   margin-bottom: 40px;
   background-color: #1a1a1a;
   padding-bottom: 2rem;
+  border-radius: 1rem;
 }
 
 .image-container img,
@@ -215,6 +244,7 @@
   background-color: transparent;
   width: 100%;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 1rem;
 }
 
 .image-container :hover {
@@ -228,6 +258,7 @@
   padding: 20px;
   height: auto;
   box-sizing: border-box;
+  overflow: scroll;
 }
 
 .span-text {
@@ -258,94 +289,13 @@
   }
 
   .text-container {
-    height: auto;
+    overflow: scroll;
   }
 
   .image-container img {
     max-width: max-content;
   }
 }
-
-/*SECTION FOR OUR PRICING*/
-/* .our-pricing-plans p {
-  text-align: center;
-}
-
-.pricing-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 70px;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-}
-
-.pricing-card {
-  border-radius: 10px;
-  border-style: solid;
-  padding: 35px;
-  background-color: #1a1a1a;
-  border-color: transparent;
-  transition: transfrom 0.4 ease, box-shadow 0.4 ease;
-}
-
-.pricing-card:hover {
-  transform: scale(1.07);
-}
-
-.pricing-card h3 {
-  color: gold;
-  margin-bottom: 25px;
-  font-family: Roboto, Arial;
-  font-size: 30px;
-  background-color: transparent;
-}
-
-.pricing-card p {
-  color: white;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.month {
-  color: #add8e6;
-  font-size: medium;
-  background-color: transparent;
-}
-
-.pricing-card ul {
-  line-height: 30px;
-  background-color: transparent;
-  margin-bottom: 40px;
-  padding: initial;
-}
-
-.pricing-card li {
-  list-style: none;
-  color: white;
-  background-color: transparent;
-  font-family: monospace;
-}
-
-.check {
-  color: green;
-  margin-right: 10px;
-  background-color: transparent;
-}
-
-.pricing-card a {
-  background-color: #add8e6;
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 3px;
-  padding: 5px 15px 5px 15px;
-  font-family: Roboto, Arial;
-  transition: transform 0.4s ease;
-}
-
-.pricing-card a:hover {
-  transform: scale(1.07);
-} */
 
 /*RESPONSIVE DESIGN FOR PRICING CONTAINER*/
 @media (max-width: 768px) {
