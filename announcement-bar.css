@@ -59,11 +59,10 @@
 }
 
 .get-started {
+  display: inline-block;
   position: absolute;
   left: 14rem;
   top: 34rem;
-  background-color: transparent;
-  display: flex;
   padding: 10px 30px 10px 30px;
   text-decoration: none;
   color: #add8e6;

@@ -12,6 +12,11 @@ body {
   padding: 10px;
 }
 
+a:focus,
+a:active {
+  outline: none;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -113,6 +118,7 @@ body {
 }
 
 .skills-container-2 {
+  max-width: 100%;
   background-color: black;
   flex: 1 1 calc(33.333% - 10px);
   box-sizing: border-box;
@@ -149,9 +155,8 @@ body {
 
 .skills-container-2 a {
   display: inline-block;
-  position: relative;
-  color: black;
-  top: 1rem;
+  margin-top: 1rem;
+  color: black !important;
   background-color: #add8e6;
   font-weight: 700;
   text-decoration: none;
