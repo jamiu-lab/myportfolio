@@ -7,9 +7,7 @@
   scrollbar-width: none;
 }
 body {
-  padding-top: 80px;
   font-family: Roboto, Arial;
-  padding: 10px;
 }
 
 a:focus,
@@ -92,18 +90,20 @@ a:active {
 }
 
 /*SECTION FOR PORTFOLIO*/
-.Portfolio h1 {
+.work-example {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.work-example h1 {
   margin-bottom: 20px;
-  margin-top: 50px;
   letter-spacing: 10px;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
-.Portfolio p {
+.work-example p {
   text-align: center;
-  margin-bottom: 40px;
   letter-spacing: 5px;
+  line-height: 1.6;
 }
 
 .portfolio-container {
@@ -117,7 +117,7 @@ a:active {
   border-radius: 1rem;
 }
 
-.skills-container-2 {
+.portfolio-card {
   max-width: 100%;
   background-color: black;
   flex: 1 1 calc(33.333% - 10px);
@@ -133,25 +133,28 @@ a:active {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.skills-container-2:hover {
+.portfolio-card:hover {
   transform: scale(1.07);
 }
 
-.skills-container-2 img {
+.portfolio-card img {
   width: 100%;
   border-radius: 8px;
   display: block;
 }
 
-.skills-container-2 h1 {
+.portfolio-card h2 {
   background-color: transparent;
   color: gold;
+  margin-top: 1rem;
 }
 
-.skills-container-2 p {
+.portfolio-card p {
   font-family: Roboto, Arial;
   color: white;
   height: 70px;
+  position: relative;
+  line-height: 1.6;
 }
 
 .project {
@@ -167,12 +170,13 @@ a:active {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.skills-container-2 a {
+.portfolio-card a {
   color: black !important;
   background-color: transparent;
   font-weight: 700;
   text-decoration: none;
   font-family: Roboto, Arial;
+  position: relative;
 }
 
 .project:hover {
@@ -192,7 +196,7 @@ a:active {
 .explore-beyond {
   background-color: black;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
   overflow: hidden;
   transition: all 0.5;
   border-radius: 2rem;
