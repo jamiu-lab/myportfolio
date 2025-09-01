@@ -135,12 +135,12 @@ a:active {
 
 .skills-container-2:hover {
   transform: scale(1.07);
-  box-shadow: 2px 5px 2px 5px black;
 }
 
 .skills-container-2 img {
   width: 100%;
   border-radius: 8px;
+  display: block;
 }
 
 .skills-container-2 h1 {
@@ -154,20 +154,28 @@ a:active {
   height: 70px;
 }
 
-.skills-container-2 a {
+.project {
   display: inline-block;
   margin-top: 1rem;
-  color: black;
   background-color: #add8e6;
   font-weight: 700;
   text-decoration: none;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  cursor: pointer;
   font-family: Roboto, Arial;
   border-radius: 5px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.skills-container-2 a:hover {
+.skills-container-2 a {
+  color: black !important;
+  background-color: transparent;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: Roboto, Arial;
+}
+
+.project:hover {
   transform: scale(1.07);
 }
 
