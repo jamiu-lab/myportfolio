@@ -186,7 +186,7 @@ a:active {
 /*RESPONSIVE WEBSITE FOR SMALLER SCREEN*/
 
 @media (max-width: 768px) {
-  .skills-container-2 {
+  .project-card {
     flex: 1 1 100%;
   }
 }
