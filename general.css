@@ -119,6 +119,7 @@ a:active {
 
 .portfolio-card {
   max-width: 100%;
+  max-height: 50rem;
   background-color: black;
   flex: 1 1 calc(33.333% - 10px);
   flex-wrap: wrap;
@@ -157,7 +158,7 @@ a:active {
   line-height: 1.6;
 }
 
-.project {
+.view-project-btn {
   display: inline-block;
   margin-top: 1rem;
   background-color: #add8e6;
@@ -179,15 +180,25 @@ a:active {
   position: relative;
 }
 
-.project:hover {
+.view-project-btn:hover {
   transform: scale(1.07);
 }
 
 /*RESPONSIVE WEBSITE FOR SMALLER SCREEN*/
 
 @media (max-width: 768px) {
-  .project-card {
+  .portfolio-card {
     flex: 1 1 100%;
+  }
+
+  .view-project-btn {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-project-btn {
+    margin-top: 3rem; /* Further reduced font size for smaller screens */
   }
 }
 
@@ -195,11 +206,39 @@ a:active {
 
 .explore-beyond {
   background-color: black;
-  width: 100%;
-  padding: 2rem;
-  overflow: hidden;
+  padding: 120px 20px;
+  text-align: center;
   transition: all 0.5;
-  border-radius: 2rem;
+}
+
+.explore-beyond h1 {
+  font-size: 7.5rem;
+  color: #add8e6;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* RESPONSIVE ADJUSTMENT FOR SAMLLER SCREEN */
+@media (max-width: 768px) {
+  .explore-beyond h1 {
+    font-size: 5em; /* Reduced font size for tablets */
+    letter-spacing: 8px; /* Adjust spacing */
+  }
+  .explore-beyond {
+    padding: 80px 20px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .flashing-text {
+    font-size: 3em; /* Further reduced font size for smaller screens */
+    letter-spacing: 5px; /* Adjust spacing */
+  }
+  .flashing-text-section {
+    padding: 60px 20px; /* Reduced padding for mobile */
+  }
 }
 
 /* .explore-beyond::before {
@@ -226,15 +265,6 @@ a:active {
   50% {
     clip-path: inset(0 0 0 94%);
   }
-}
-
-.explore-beyond h1 {
-  font-size: 80px;
-  color: #add8e6;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 12px;
-  margin-bottom: 20px;
 }
 
 /*IMAGE-TEXT-CONTAINER SECTION*/
