@@ -695,7 +695,7 @@ footer {
     align-items: center;
     margin: 0;
     gap: 3rem;
-    margin-top: 5rem;
+    margin-top: 3.5rem;
   }
 }
 
@@ -734,7 +734,7 @@ footer {
 @media (max-width: 768px) {
   .secure-payment-p {
     position: absolute;
-    top: 18rem;
+    top: 14rem;
     justify-content: center;
     margin-left: 1rem;
     margin-top: 1rem;
@@ -744,7 +744,7 @@ footer {
 @media (max-width: 480px) {
   .secure-payment-p {
     position: absolute;
-    top: 17.5rem;
+    top: 16rem;
     justify-content: center;
     margin-left: 1rem;
     margin-top: 1rem;
