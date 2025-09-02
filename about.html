@@ -111,6 +111,25 @@
       .value-card h3 {
         margin-bottom: 10px;
       }
+
+      @media (max-width: 480px) {
+        .social-p {
+          position: absolute;
+          bottom: 17.5rem;
+          justify-content: center;
+          margin-left: 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .secure-payment-p {
+          position: absolute;
+          top: 19rem;
+          justify-content: center;
+          margin-left: 1rem;
+          margin-top: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -214,15 +233,26 @@
       <div class="footer">
         <div class="social">
           <div style="margin-bottom: 1rem" class="social-p">Socials:</div>
-          <a href="https://wa.me/qr/56R6LGP2NPE6J1">
+          <a href="https://wa.me/qr/56R6LGP2NPE6J1" target="_blank">
             <img src="thumbnails/wa.jpeg"
           /></a>
           <a
             href="https://www.linkedin.com/in/jamiu-siddiq-8689272aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
           >
-            <img src="thumbnails/in.jpeg" />
+            <img
+              style="
+                border-radius: 50px;
+                border-style: solid;
+                border-color: transparent;
+                background-color: transparent;
+              "
+              src="thumbnails/in.jpeg"
+            />
           </a>
-          <a href="https://www.instagram.com/4th_hero?igsh=Z3ZxY3Fqa2s0d3Zr"
+          <a
+            href="https://www.instagram.com/4th_hero?igsh=Z3ZxY3Fqa2s0d3Zr"
+            target="_blank"
             ><img style="width: 35px" src="thumbnails/insta.jpeg"
           /></a>
         </div>
@@ -251,8 +281,13 @@
           </div>
           <div class="icons">
             <a> <img src="thumbnails/fiverr_prev_ui.png" alt="Fiverr" /></a>
-            <a> <img src="thumbnails/upwork_prev_ui.png" alt="Upwork" /></a>
-            <a href="https://kwork.com/user/VISION_DIGITAL">
+            <a
+              href="https://www.upwork.com/freelancers/~018e7dca04a268f80f?mp_source=shareL"
+              target="_blank"
+            >
+              <img src="thumbnails/upwork_prev_ui.png" alt="Upwork"
+            /></a>
+            <a href="https://kwork.com/user/VISION_DIGITAL" target="_blank">
               <img
                 style="border-radius: 50px"
                 src="thumbnails/kwork.png"
