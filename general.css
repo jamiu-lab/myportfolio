@@ -102,7 +102,7 @@ a:active {
 
 .work-example p {
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   line-height: 1.6;
 }
 
@@ -196,7 +196,7 @@ a:active {
   background-color: black;
   padding: 120px 20px;
   text-align: center;
-  transition: all 0.5;
+  position: relative;
 }
 
 .explore-beyond h1 {
@@ -229,17 +229,19 @@ a:active {
   }
 }
 
-/* .explore-beyond::before {
+.explore-beyond::before,
+.explore-beyond::after {
   content: "";
   position: absolute;
-  width: 96%;
+  width: 99%;
   border: 0.05rem solid #ffff;
   inset: 0;
-  border-radius: 2rem;
-  animation: pathRotate-explore-beyong 2s linear infinite;
-} */
+  animation: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 
-@keyframes pathRotate {
+@keyframes rotate {
   0%,
   100% {
     clip-path: inset(0 0 94% 0);
@@ -250,7 +252,7 @@ a:active {
   50% {
     clip-path: inset(94% 0 0 0);
   }
-  50% {
+  75% {
     clip-path: inset(0 0 0 94%);
   }
 }
@@ -343,14 +345,7 @@ a:active {
   }
 }
 
-/*RESPONSIVE DESIGN FOR PRICING CONTAINER*/
-@media (max-width: 768px) {
-  .pricing-container {
-    max-width: fit-content;
-    row-gap: 10px;
-  }
-}
-
+/* QUOTE SLIDE */
 .quote-slider-section {
   color: #add8e6; /* Light blue text color */
   padding: 100px 20px;
@@ -421,6 +416,17 @@ a:active {
   transform: rotateY(270deg) translateZ(300px);
 }
 
+/* THE TOOLS */
+.the-tools-container img {
+  width: 100%;
+  padding: 1rem;
+}
+
+.the-tools-container h1 {
+  text-transform: uppercase;
+}
+
+/* FAQ */
 .faq {
   margin: auto;
   border-radius: 8px;
@@ -685,6 +691,7 @@ footer {
 @media (max-width: 768px) {
   footer {
     height: auto;
+    margin-bottom: 0.5rem;
   }
 }
 @media (max-width: 768px) {
