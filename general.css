@@ -3,20 +3,10 @@
   margin: 0;
   box-sizing: border-box;
   background-color: black;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 body {
   font-family: Roboto, Arial;
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
-
-::-webkit-scrollbar {
-  display: none;
+  overflow-y: auto;
 }
 
 /*SERVICE SECTION*/
@@ -229,18 +219,27 @@ a:active {
   }
 }
 
+.explore-beyond {
+  position: relative;
+  z-index: 1;
+}
+
 .explore-beyond::before,
 .explore-beyond::after {
   content: "";
   position: absolute;
-  width: 99%;
-  border: 0.05rem solid #ffff;
   inset: 0;
-  animation: rotate;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  border: 0.2rem solid #add8e6;
+  pointer-events: none;
+  animation: rotate 2s infinite linear;
 }
 
+.explore-beyond::after {
+  border: 0.2rem solid #add8e6;
+  animation: rotate2 2s infinite linear;
+}
+
+/* First rotating border */
 @keyframes rotate {
   0%,
   100% {
@@ -254,6 +253,23 @@ a:active {
   }
   75% {
     clip-path: inset(0 0 0 94%);
+  }
+}
+
+/* Second rotating border with offset path */
+@keyframes rotate2 {
+  0%,
+  100% {
+    clip-path: inset(94% 0 0 0);
+  }
+  25% {
+    clip-path: inset(0 0 0 94%);
+  }
+  50% {
+    clip-path: inset(0 0 94% 0);
+  }
+  75% {
+    clip-path: inset(0 94% 0 0);
   }
 }
 
@@ -292,6 +308,7 @@ a:active {
   height: auto;
   box-sizing: border-box;
   overflow: scroll;
+  scrollbar-width: none;
 }
 
 .span-text {
@@ -771,5 +788,59 @@ footer {
   .copywrite {
     margin-bottom: 1.5rem;
     align-items: center;
+  }
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  font-size: 26px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 1000;
+  animation: float 3s ease-in-out infinite;
+}
+
+#backToTop:hover {
+  background: #1e40af;
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Arrow bounce effect */
+#backToTop::before {
+  content: "↑";
+  display: block;
+  font-size: 28px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
   }
 }

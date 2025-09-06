@@ -114,3 +114,21 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     }
   );
 });
+
+const backToTop = document.getElementById("backToTop");
+
+// Show button when scrolling down
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 6000) {
+    backToTop.style.display = "flex";
+    backToTop.style.justifyContent = "center";
+    backToTop.style.alignItems = "center";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
+
+// Scroll back to top smoothly
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
