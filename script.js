@@ -72,13 +72,13 @@ faqItems.forEach((item) => {
 });
 
 /*SCRIPT FOR CONTACT FORM*/
-
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault(); // Stop page reload
 
   const form = e.target;
   const formData = new FormData(form);
 
+  // SAVE TO GOOGLE SHEET
   fetch(
     "https://script.google.com/macros/s/AKfycbz-KBzI3V09M7yWZUwZ5TogsYPpf0M0A0k5_IWGRNuIJuG3lbbtYTJ2WHPVaeYveZZ6DA/exec" /*Replace with google sheet link*/,
     {
@@ -95,10 +95,23 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     .catch((error) => {
       document.getElementById("statusMsg").textContent = "❌ failed.";
     });
-});
 
-window.addEventListener("mousemove", (e) => {
-  const light = document.querySelector(".light");
-  light.style.setProperty("--x", e.clientX + "px");
-  light.style.setProperty("--y", e.clientY + "px");
+  // SCRIPT FOR EMAILJS
+  (function () {
+    emailjs.init("IVCEvi1ga6bpQ7ZL2"); // replace with your public key
+  })();
+
+  // SEND VIA EMAILJS
+  emailjs.sendForm("service_qan1lfl", "template_gft3otk", this).then(
+    () => {
+      document.getElementById("statusMsg").textContent =
+        "✅ Message sent & saved!";
+      form.reset();
+    },
+    (error) => {
+      document.getElementById("statusMsg").textContent =
+        "❌ Email sending failed!";
+      console.error(error);
+    }
+  );
 });
