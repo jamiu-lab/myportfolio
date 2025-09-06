@@ -88,12 +88,11 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   )
     .then((response) => response.text())
     .then((data) => {
-      document.getElementById("statusMsg").textContent =
-        "✅ Form submitted successfully!";
+      document.getElementById("statusMsg").textContent = "";
       form.reset(); // Clear form
     })
     .catch((error) => {
-      document.getElementById("statusMsg").textContent = "❌ failed.";
+      document.getElementById("statusMsg").textContent = "";
     });
 
   // SCRIPT FOR EMAILJS
