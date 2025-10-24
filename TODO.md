@@ -1,8 +1,0 @@
-- [x] Fix sliding quote carousel: Update showSlide function to use 'active' class instead of inline opacity
-- [x] Fix contact form: Add submission flag to prevent double submission and improve status handling
-- [x] Test the fixes by launching the page in browser
-- [x] Fix mobile side menu: Change toggleMenu to use 'active' class instead of 'open'
-- [x] Add slide-in animation from left for mobile menu
-- [x] Reduce spacing between menu links
-- [x] Add staggered slide-in animation for menu links
-- [x] Slow down menu link animations
