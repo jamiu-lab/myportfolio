@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Vision Digital - Professional Portfolio</title>
-    <meta charset="UTF-8" />
+    <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="title"
@@ -16,46 +15,82 @@
       name="keywords"
       content="Vision Digital, website development, Shopify development, ecommerce, online store, Shopify expert, Shopify website, web design, digital marketing, Nigeria"
     />
-    <meta name="author" content="Vision Digital" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta name="author" content="Vision Digital" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <section class="announcement-bar">
-        <marquee
-          behavior="scroll"
-          direction="left"
-          scrollamount="10"
-          onmouseover="this.stop();"
-          onmouseout="this.start();"
-        >
-          <p>
-            WE'RE EXCITED TO SHARE OUR PORTFOLIO WITH YOU SHOWCASING OUR
-            EXPERTISE IN DIGITAL EXCELLENCE
-          </p>
-        </marquee>
-      </section>
+    <link rel="stylesheet" href="heading.css" />
+    <link rel="stylesheet" href="announcement-bar.css" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="footer.css" />
 
-      <nav class="heading">
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div class="logo">
-          <a href="index.html"
-            ><img src="logo/IMG-20250502-WA0009.jpg" alt="Vision Digital Logo"
-          /></a>
-        </div>
-        <div class="nav-menu" id="navMenu">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="service/service.html">Service</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </div>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /*General Reset*/
+
+      p {
+        background-color: transparent;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        font-size: 20px;
+      }
+
+      h1 {
+        background-color: transparent;
+        font-family: Roboto, Arial;
+        text-align: center;
+        color: gold;
+        text-transform: uppercase;
+        font-size: 2em;
+      }
+
+      h2 {
+        background-color: transparent;
+        font-family: Roboto, Arial;
+        color: gold;
+        font-size: 25px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body style="padding-top: 5rem">
+    <!--Announment-marquee-bar-->
+    <section class="announcement-bar">
+      <marquee
+        style="background-color: transparent"
+        behavior="scroll"
+        direction="left"
+        scrollamount="10"
+        onmouseover="this.stop();"
+        onmouseout="this.start();"
+      >
+        <p>
+          WE'RE EXCITED TO SHARE OUR PORTFOLIO WITH YOU SHOWCASING OUR EXPERTISE
+          IN DIGITAL EXCELLENCE
+        </p>
+      </marquee>
+    </section>
+
+    <header class="heading">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="logo">
+        <a class="logo" href="index.html"
+          ><img src="logo/IMG-20250502-WA0009.jpg" alt="Vision Digital Logo"
+        /></a>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a class="hyperlink" href="index.html"> Home </a>
+        <a class="hyperlink" href="about.html"> About </a>
+        <a class="hyperlink" href="service/service.html"> Service </a>
+        <a class="hyperlink" href="#portfolio"> Portfolio </a>
+        <a class="hyperlink" href="#contact"> Contact </a>
+        <!-- <a class="hyperlink" href="Web-analyzer.html"> Website Analyzer </a> -->
       </nav>
     </header>
 
@@ -68,198 +103,382 @@
       </div>
     </section>
 
-    <main>
-      <section class="expertise">
-        <p class="type-writer" id="typewriter"></p>
-      </section>
+    <!--LEVEL OF EXPERTISE SECTION-->
+    <section>
+      <p class="type-writer" id="typewriter"></p>
+    </section>
 
-      <section class="services">
-        <div class="service-container">
-          <div class="skills-container">
-            <h2>Web Development</h2>
-            <img src="thumbnails/E-commerce Website.png" alt="Web Development Icon" />
-            <p>Building responsive, user-friendly websites that blend functionality and performance to elevate online presence.</p>
+    <section>
+      <div class="service-container">
+        <div class="skills-container">
+          <h2>Web Development</h2>
+          <img src="thumbnails/E-commerce Website.png" alt="" />
+          <p>
+            Building responsive, user-friendly websites that blend
+            functionality, and performance to elevate online presence.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <h2>Graphic design</h2>
+          <img src="thumbnails/Graphic Design.png" alt="" />
+          <p>
+            Designing striking visuals that embody your brand's identity and
+            engage your audience effectively.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <h2>SEO Optimization</h2>
+          <img src="thumbnails/Search Engine Optimisation.png" alt="" />
+          <p>
+            Optimizing website to boost search engine rankings, drive traffic,
+            and enhance online visibility.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <h2>Content Creator</h2>
+          <img src="thumbnails/Content Creator.png" alt="" />
+          <p>
+            Crafting engaging, authentic content that captivates audience and
+            builds brand connection across platforms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION-->
+    <section id="portfolio">
+      <div class="work-example">
+        <h1>work example</h1>
+        <p>
+          A curated collection of my project, highlighting my skills and
+          commitment to excellence
+        </p>
+      </div>
+
+      <section class="portfolio-container">
+        <div class="portfolio-card">
+          <img
+            src="thumbnails/6pm.png"
+            alt="E-commerce website for 6pmseason homepage design with HTML, CSS, and JavaScript"
+          />
+          <h2>6pmseason</h2>
+          <p class="description">
+            Striking visuals and creative design that elevate your brand
+            indentity and engage your audience effectively.
+          </p>
+          <div class="view-project-btn">
+            <a
+              href="https://www.6pmseason.com/?srsltid=AfmBOoodaZfTyhDnA6HmPehruNp6Fn6d2EGa6Yeb26DWOS4CCT4mme_E"
+              target="_blank"
+              >VIEW PROJECT</a
+            >
           </div>
-          <div class="skills-container">
-            <h2>Graphic Design</h2>
-            <img src="thumbnails/Graphic Design.png" alt="Graphic Design Icon" />
-            <p>Designing striking visuals that embody your brand's identity and engage your audience effectively.</p>
+        </div>
+
+        <div class="portfolio-card">
+          <img
+            src="thumbnails/trendklo.com.png"
+            alt="E-commerce website for trendklo homepage design with HTML, CSS, and JavaScript"
+          />
+          <h2>Trendklo</h2>
+          <p class="description">
+            A mobile-optimized interface ensuring fast loading, intuitive
+            navigation, and on-the-go accessibility.
+          </p>
+          <div class="view-project-btn">
+            <a href="https://trendklo.com/" target="_blank">VIEW PROJECT</a>
           </div>
-          <div class="skills-container">
-            <h2>SEO Optimization</h2>
-            <img src="thumbnails/Search Engine Optimisation.png" alt="SEO Optimization Icon" />
-            <p>Optimizing websites to boost search engine rankings, drive traffic, and enhance online visibility.</p>
+        </div>
+
+        <div class="portfolio-card">
+          <img
+            src="thumbnails/cheapstuff.png"
+            alt="E-commerce website for cheapstuff2 homepage design with HTML, CSS, and JavaScript"
+          />
+          <h2>Cheapstuff</h2>
+          <p class="description">
+            A streamlined online store designed to convert visitores into loyal
+            customers and boost your sales potential.
+          </p>
+          <div class="view-project-btn">
+            <a href="https://cheapstuff2.com/" target="_blank">VIEW PROJECT</a>
           </div>
-          <div class="skills-container">
-            <h2>Content Creation</h2>
-            <img src="thumbnails/Content Creator.png" alt="Content Creation Icon" />
-            <p>Crafting engaging, authentic content that captivates audiences and builds brand connections across platforms.</p>
+        </div>
+
+        <div class="portfolio-card">
+          <img
+            src="thumbnails/Homestro.png"
+            alt="E-commerce website for homes-tro homepage design with HTML, CSS, and JavaScript"
+          />
+          <h2>HomesTro</h2>
+          <p class="description">
+            A visual appealing website crafted to showcase your brand's
+            uniqueness and captivate your audience.
+          </p>
+          <div class="view-project-btn">
+            <a
+              href="https://homes-tro.com/?srsltid=AfmBOor9GE9j4ztnXUprdoNDfBYTVJ65GIGFM9C47UctqwLifyG9NrzJ"
+              target="_blank"
+              >VIEW PROJECT</a
+            >
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img
+            src="thumbnails/petalandpup.png"
+            alt="E-commerce website for petalandpup homepage design with HTML, CSS, and JavaScript"
+          />
+          <h2>Petalandpup</h2>
+          <p class="description">
+            A flexible website layout that adapts beautifully across all
+            devices, delivering a seamless user experience.
+          </p>
+          <div class="view-project-btn">
+            <a href="https://petalandpup.com/" target="_blank">VIEW PROJECT</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img
+            src="thumbnails/primowears.png"
+            alt="E-commerce website for primowears homepage design with HTML, CSS, and JavaScript"
+          />
+          <h2>Primowears</h2>
+          <p class="description">
+            Search engine strategies tailored to rank higher and attract
+            organic, traffic and grow your online presence.
+          </p>
+          <div class="view-project-btn">
+            <a href="https://primowears.com/" target="_blank">VIEW PROJECT</a>
           </div>
         </div>
       </section>
+    </section>
 
-      <section id="portfolio">
-        <div class="work-example">
-          <h1>Work Examples</h1>
-          <p>A curated collection of my projects, highlighting my skills and commitment to excellence.</p>
-        </div>
-        <div class="portfolio-container">
-          <div class="portfolio-card">
-            <img src="thumbnails/6pm.png" alt="6pmseason E-commerce Website" />
-            <h2>6pmseason</h2>
-            <p class="description">Striking visuals and creative design that elevate your brand identity and engage your audience effectively.</p>
-            <div class="view-project-btn">
-              <a href="https://www.6pmseason.com/?srsltid=AfmBOoodaZfTyhDnA6HmPehruNp6Fn6d2EGa6Yeb26DWOS4CCT4mme_E" target="_blank">VIEW PROJECT</a>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="thumbnails/trendklo.com.png" alt="Trendklo E-commerce Website" />
-            <h2>Trendklo</h2>
-            <p class="description">A mobile-optimized interface ensuring fast loading, intuitive navigation, and on-the-go accessibility.</p>
-            <div class="view-project-btn">
-              <a href="https://trendklo.com/" target="_blank">VIEW PROJECT</a>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="thumbnails/cheapstuff.png" alt="Cheapstuff E-commerce Website" />
-            <h2>Cheapstuff</h2>
-            <p class="description">A streamlined online store designed to convert visitors into loyal customers and boost your sales potential.</p>
-            <div class="view-project-btn">
-              <a href="https://cheapstuff2.com/" target="_blank">VIEW PROJECT</a>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="thumbnails/Homestro.png" alt="HomesTro E-commerce Website" />
-            <h2>HomesTro</h2>
-            <p class="description">A visually appealing website crafted to showcase your brand's uniqueness and captivate your audience.</p>
-            <div class="view-project-btn">
-              <a href="https://homes-tro.com/?srsltid=AfmBOor9GE9j4ztnXUprdoNDfBYTVJ65GIGFM9C47UctqwLifyG9NrzJ" target="_blank">VIEW PROJECT</a>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="thumbnails/petalandpup.png" alt="Petalandpup E-commerce Website" />
-            <h2>Petalandpup</h2>
-            <p class="description">A flexible website layout that adapts beautifully across all devices, delivering a seamless user experience.</p>
-            <div class="view-project-btn">
-              <a href="https://petalandpup.com/" target="_blank">VIEW PROJECT</a>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="thumbnails/primowears.png" alt="Primowears E-commerce Website" />
-            <h2>Primowears</h2>
-            <p class="description">Search engine strategies tailored to rank higher and attract organic traffic to grow your online presence.</p>
-            <div class="view-project-btn">
-              <a href="https://primowears.com/" target="_blank">VIEW PROJECT</a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!--EXPLORE BEYOND SECTION-->
 
-      <section class="explore-beyond">
+    <div class="padding">
+      <div class="explore-beyond">
         <h1>Explore Beyond</h1>
-      </section>
+      </div>
+    </div>
 
-      <section class="insights">
-        <div class="insight">
-          <div class="image-container">
-            <img src="thumbnails/Brown and Orange Simple Grow your Business Instagram Post_20250607_081112_0000.png" alt="Sales Funnel Illustration" />
-          </div>
-          <div class="text-container">
-            <h2>The first way to quickly grow your business is by building a sales funnel.</h2>
-            <p>Integrating a sales funnel into your Shopify store is one of the most effective ways to increase conversion and drive consistent sales. Instead of relying on one-time visits, a well-designed funnel guides your customers through a journey, from discovering your products to making a purchase, and even returning for more. With the right setup, you can capture interest through ads or content, follow up with emails or SMS, offer time-sensitive discounts, and recommend related products after checkout. It's all about creating a smooth, personalized experience that keeps customers engaged and buying. If you're not using a funnel yet, you're likely leaving money on the table.</p>
-          </div>
-        </div>
-        <div class="insight">
-          <div class="image-container">
-            <img src="thumbnails/Digital marketing success.png" alt="Social Media Marketing Illustration" />
-          </div>
-          <div class="text-container">
-            <h2>Integrate social media marketing</h2>
-            <p>Integrating social media advertising with your Shopify store is like turning on a spotlight for your brand. It’s not just about selling — it’s about starting real conversations with the people who matter most to your business. When you pair compelling content with targeted ads on platforms like Facebook, Instagram, or TikTok, you’re not just posting — you’re attracting. High-quality visuals, short videos, and relatable messages help you stand out and earn trust. And with smart tools like the Facebook Pixel or TikTok Pixel, you can follow up with visitors who showed interest but didn’t buy. The result? More eyes on your products, more clicks to your store, and a better chance of turning curious scrollers into loyal customers. It’s a simple shift that can lead to serious growth.</p>
-          </div>
-        </div>
-      </section>
+    <!--IMAGE-TEXT-CONTAINER SECTION-->
 
-      <section class="testimonials">
-        <div class="quote-carousel">
-          <div class="quote-slide">
-            <p class="quote-text">"A store without a website is like a store without a door, a great product needs a great website to shine."</p>
-            <p class="quote-author">Vision Digital</p>
-          </div>
-          <div class="quote-slide">
-            <p class="quote-text">"Your website is your handshake in the digital world, sell more, stress less - we've got the tech covered."</p>
-            <p class="quote-author">Vision Digital</p>
-          </div>
-          <div class="quote-slide">
-            <p class="quote-text">"Turning browsers into buyers, one pixel at a time, every click counts. Vision Digital makes sure it counts for you."</p>
-            <p class="quote-author">Vision Digital</p>
-          </div>
-          <div class="quote-slide">
-            <p class="quote-text">"If your store isn't making sales while you sleep, it's time for an upgrade."</p>
-            <p class="quote-author">Vision Digital</p>
-          </div>
-        </div>
-      </section>
+    <section class="image-text-container">
+      <div class="image-container">
+        <img
+          src="thumbnails/Brown and Orange Simple Grow your Business Instagram Post_20250607_081112_0000.png"
+          alt=""
+        />
+      </div>
+      <div class="text-container">
+        <span class="span-text"
+          >The first way to quickly grow your business is by building a sales
+          funnel.</span
+        >
+        <p class="paragraph">
+          Integrating a sales funnel into your Shopify store is one of the most
+          effective ways to increase conversion and drive consistent sales.
+          instead of relying on one-time visits, a well designed funnel guides
+          your customers through a journey, from discovering your products to
+          making a purchase, and even returning for more. With the right setup,
+          you can capture interest through ads or content, follow up with emails
+          or SMS, offer time-sensitive discounts and recommend related products
+          after chectout. it's all about creating a smooth, pesonalized
+          experience that keep customers engaged and buying. if you're not using
+          a funnel yet, you're likely leaving money on the table.
+        </p>
+        <!-- <a href="btn">LEARN MORE</a> -->
+      </div>
 
-      <section class="tools">
-        <h1>The Tools</h1>
-        <div class="tools-content">
-          <img src="thumbnails/D Tool.png" alt="Tools Illustration" />
-        </div>
-      </section>
+      <div class="image-container">
+        <img src="thumbnails/Digital marketing success.png" alt="" />
+      </div>
+      <div class="text-container">
+        <span class="span-text">integrate social media marketing</span>
+        <p class="paragraph">
+          Integrating social media advertising with your Shopify store is like
+          turning on a spotlight for your brand. It’s not just about selling —
+          it’s about starting real conversations with the people who matter most
+          to your business. When you pair compelling content with targeted ads
+          on platforms like Facebook, Instagram, or TikTok, you’re not just
+          posting — you’re attracting. High-quality visuals, short videos, and
+          relatable messages help you stand out and earn trust. And with smart
+          tools like the Facebook Pixel or TikTok Pixel, you can follow up with
+          visitors who showed interest but didn’t buy. The result? More eyes on
+          your products, more clicks to your store, and a better chance of
+          turning curious scrollers into loyal customers. It’s a simple shift
+          that can lead to serious growth.
+        </p>
+        <!-- <a href="btn">LEARN MORE</a> -->
+      </div>
+    </section>
 
-      <section class="faq">
-        <h1>Frequently Asked Questions</h1>
-        <div class="faq-item">
-          <div class="faq-question">What kind of website can you build?<span class="arrow">▼</span></div>
-          <div class="faq-answer">I specialize in responsive websites, landing pages, portfolios, blogs, e-commerce sites, and business websites.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Do you build a mobile-friendly website?<span class="arrow">▼</span></div>
-          <div class="faq-answer">Yes, all my websites are fully responsive and optimized for mobile, tablet, and desktop devices.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">What tools or technology do you use?<span class="arrow">▼</span></div>
-          <div class="faq-answer">I use HTML5, CSS, JavaScript, React, Git, and various design tools like Figma, Canva, or CorelDRAW depending on the project.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Can you redesign my existing website?<span class="arrow">▼</span></div>
-          <div class="faq-answer">Absolutely, I can give your current website a fresh modern look and improve speed and usability.</div>
-        </div>
-      </section>
+    <!--SLIDING QUOTE SECTION-->
 
-      <section class="contact" id="contact">
-        <div class="contact-section">
-          <h1>Contact</h1>
-          <p>Need to build a store, website or maybe need some store customizations?</p>
+    <section class="quote-slider-section">
+      <div class="quote-carousel">
+        <div class="quote-slide">
+          <p class="quote-text">
+            "A store without a website is like a store without a door, a great
+            products needs a great website to shine."
+          </p>
+          <p class="quote-author">_</p>
         </div>
-        <div class="contact-form-container">
-          <div id="statusMsg" class="status-msg"></div>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" name="name" id="name" placeholder="John Michael" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" name="phone" id="phone" placeholder="+234 812 345 6789" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" name="email" id="email" placeholder="example@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="company">Company Name</label>
-              <input type="text" name="company" id="company" placeholder="Company Ltd" />
-            </div>
-            <div class="form-group full-width">
-              <label for="message">Message</label>
-              <textarea name="message" id="message" rows="5" placeholder="Write your message here..."></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-          </form>
+        <div class="quote-slide">
+          <p class="quote-text">
+            "Your website is your handshake in the digital world, sell more,
+            stress less - we've got the tech covered."
+          </p>
+          <p class="quote-author">_</p>
         </div>
-      </section>
+        <div class="quote-slide">
+          <p class="quote-text">
+            "Turning browsers into buyers, one pixel at a time, every click
+            counts. vision digital make sure it counts for you."
+          </p>
+          <p class="quote-author">_</p>
+        </div>
+        <div class="quote-slide">
+          <p class="quote-text">
+            "If your store isn't making sales while you sleep, it's time for an
+            upgrade."
+          </p>
+          <p class="quote-author">_</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE TOOLS SECTION -->
+    <section class="the-tools-container">
+      <h1>the tools</h1>
+      <div class="the-tools">
+        <img src="thumbnails/D Tool.png" />
+      </div>
+    </section>
+
+    <!--FAQ SECTION-->
+
+    <section class="faq">
+      <h1 style="margin-bottom: 20px; margin-top: 20px">
+        FREQUENTLY ASKED QUESTION
+      </h1>
+      <div class="faq-item">
+        <div class="faq-question">
+          What kind of website can you build?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          I specialize in responsive website, landing pages, porfolios, blog,
+          e-commerce, and business website.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you build a mobile-friendly website?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, all my website are fully responsive and optimized for mobile,
+          tablet, and destop devices.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What tools or technology do you use?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          I use HTML5, CSS, JavaScript, React, Git, and various design tools
+          like Figma, Canva, or CorelDRAW depending on the project.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can you redesign my existing website?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Absolutely, I can give your current website a fresh modern look and
+          improve speed and usability.
+        </div>
+      </div>
+    </section>
+
+    <!--CONTACT SECTION-->
+
+    <section class="Contact" id="contact">
+      <div class="contact-section">
+        <h1>Contact</h1>
+        <p>
+          Need to build a store, website or maybe need some store
+          customizations?
+        </p>
+      </div>
+
+      <div class="contact-form-container">
+        <div id="statusMsg" class="status-msg"></div>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="John Michael"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="+234 812 345 6789"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <input
+              type="text"
+              name="company"
+              id="company"
+              placeholder="Company Ltd"
+            />
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Write your message here..."
+            ></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
 
     <footer>
       <div class="footer">
