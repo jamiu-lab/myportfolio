@@ -203,7 +203,7 @@ body {
   margin: 0;
 }
 
-/* RESPONSIVE ADJUSTMENT FOR SAMLLER SCREEN */
+/* RESPONSIVE WEBSITE FOR SAMLLER SCREEN */
 @media (max-width: 768px) {
   .explore-beyond h1 {
     font-size: 5em; /* Reduced font size for tablets */
