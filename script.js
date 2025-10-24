@@ -2,7 +2,7 @@
 
 function toggleMenu() {
   const navMenu = document.getElementById("navMenu");
-  navMenu.classList.toggle("open");
+  navMenu.classList.toggle("active");
 }
 
 /*SCRIPT FOR SLIDDING QUOTE*/
@@ -13,8 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      slide.style.opacity = i === index ? "1" : "0";
+      if (i === index) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
     });
     document.querySelector(".quote-carousel").style.transform = `rotateY(-${
       index * 90
@@ -73,8 +76,12 @@ faqItems.forEach((item) => {
 });
 
 /*SCRIPT FOR CONTACT FORM*/
+let isSubmitting = false;
+
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault(); // Stop page reload
+
+  if (isSubmitting) return; // Prevent double submission
 
   const form = e.target;
   const formData = new FormData(form);
@@ -97,45 +104,45 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     return;
   }
 
+  isSubmitting = true;
   statusMsg.textContent = "⏳ Sending message...";
   statusMsg.style.color = "gold";
 
-  // SAVE TO GOOGLE SHEET
-  fetch(
-    "https://script.google.com/macros/s/AKfycbz-KBzI3V09M7yWZUwZ5TogsYPpf0M0A0k5_IWGRNuIJuG3lbbtYTJ2WHPVaeYveZZ6DA/exec" /*Replace with google sheet link*/,
-    {
-      method: "POST",
-      body: formData,
-    }
-  )
-    .then((response) => response.text())
-    .then((data) => {
-      statusMsg.textContent = "✅ Message sent & saved!";
-      statusMsg.style.color = "green";
-      form.reset(); // Clear form
-    })
-    .catch((error) => {
-      statusMsg.textContent = "❌ Failed to save to sheet.";
-      statusMsg.style.color = "red";
-      console.error(error);
-    });
-
-  // SCRIPT FOR EMAILJS
+  // Initialize EmailJS
   (function () {
     emailjs.init("IVCEvi1ga6bpQ7ZL2"); // replace with your public key
   })();
 
-  // SEND VIA EMAILJS
+  // Send via EmailJS first
   emailjs.sendForm("service_qan1lfl", "template_gft3otk", this).then(
     () => {
-      statusMsg.textContent = "✅ Message sent & saved!";
-      statusMsg.style.color = "green";
-      form.reset();
+      // If EmailJS succeeds, save to Google Sheet
+      fetch(
+        "https://script.google.com/macros/s/AKfycbz-KBzI3V09M7yWZUwZ5TogsYPpf0M0A0k5_IWGRNuIJuG3lbbtYTJ2WHPVaeYveZZ6DA/exec" /*Replace with google sheet link*/,
+        {
+          method: "POST",
+          body: formData,
+        }
+      )
+        .then((response) => response.text())
+        .then((data) => {
+          statusMsg.textContent = "✅ Message sent & saved!";
+          statusMsg.style.color = "green";
+          form.reset(); // Clear form
+          isSubmitting = false;
+        })
+        .catch((error) => {
+          statusMsg.textContent = "❌ Failed to save to sheet.";
+          statusMsg.style.color = "red";
+          console.error(error);
+          isSubmitting = false;
+        });
     },
     (error) => {
       statusMsg.textContent = "❌ Email sending failed!";
       statusMsg.style.color = "red";
       console.error(error);
+      isSubmitting = false;
     }
   );
 });
